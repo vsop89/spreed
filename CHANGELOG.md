@@ -1,7 +1,7 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
-## 5.99.10 – 2019-04-02
+## 6.0.0 – 2019-04-DD
 ### Added
 - Administrators can now define commands which can be used in the chat. See [commands.md](https://github.com/nextcloud/spreed/blob/master/docs/commands.md) for more information
   [#1453](https://github.com/nextcloud/spreed/pull/1453)
