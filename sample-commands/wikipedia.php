@@ -20,7 +20,17 @@ declare(strict_types=1);
  *
  */
 
-[, $searchTerm] = $argv;
+if (PHP_SAPI !== 'cli') {
+	// Only allow access via the console
+	exit;
+}
+
+if ($argc < 2) {
+	echo 'Missing search term in call to wikipedia.php';
+	return 1;
+}
+
+$searchTerm = $argv[1];
 
 if ($searchTerm === '--help') {
 	echo '/wiki - A simple command to find wikipedia articles for a term' . "\n";
