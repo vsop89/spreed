@@ -58,7 +58,7 @@ class AddSamples extends Base {
 			$commands[] = $this->service->create(
 				'',
 				'wiki',
-				'Wikipedia search',
+				'Wikipedia',
 				'php ' . $this->appManager->getAppPath('spreed') . '/sample-commands/wikipedia.php "{ARGUMENTS_DOUBLEQUOTE_ESCAPED}"',
 				Command::RESPONSE_ALL,
 				Command::ENABLED_ALL

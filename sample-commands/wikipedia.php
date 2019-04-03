@@ -22,6 +22,14 @@ declare(strict_types=1);
 
 [, $searchTerm] = $argv;
 
+if ($searchTerm === '--help') {
+	echo '/wiki - A simple command to find wikipedia articles for a term' . "\n";
+	echo "\n";
+	echo 'Example: /wiki Nextcloud' . "\n";
+	$searchTerm = 'Nextcloud';
+}
+
+
 $endpoint = 'https://en.wikipedia.org/w/api.php';
 $parameters = [
 	'action' => 'opensearch',
@@ -31,7 +39,7 @@ $parameters = [
 ];
 $content = file_get_contents($endpoint . '?' . http_build_query($parameters));
 $results = json_decode($content, true);
-[$search, $titles, $descriptions, $links] = $results;
+[, $titles, $descriptions, $links] = $results;
 
 $numArticles = count($titles);
 if ($numArticles === 0) {
