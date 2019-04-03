@@ -301,7 +301,7 @@
 					this.setRoom(model);
 				}
 			});
-			this._sidebarView.addTab('collections', { label: t('spreed', 'Collections'), icon: 'icon-category-integration' }, this._collectionsView);
+			this._sidebarView.addTab('collections', { label: t('spreed', 'Projects'), icon: 'icon-category-integration' }, this._collectionsView);
 		},
 		_hideParticipantList: function() {
 			this._sidebarView.removeTab('participants');
